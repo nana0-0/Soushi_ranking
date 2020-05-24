@@ -1,0 +1,259 @@
+* {
+  box-sizing: border-box;
+  font-family: "VT323", monospace;
+}
+
+body {
+  background-color: #d9c6ff;
+
+  margin: 0;
+  font-size: 1.8em;
+}
+
+/* Style the header */
+.header {
+  color: #2b292b;
+
+  background-color: #d9c6ff;
+  
+  
+
+  padding: 9px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #2b292b;
+  height: 40px;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #d9fff2;
+  color: black;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 5px;
+  text-align: center;
+}
+
+/* Left and right column */
+.column.side {
+  width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side,
+  .column.middle {
+    width: 100%;
+  }
+}
+
+.rankbox {
+  border: solid;
+  margin: auto auto;
+  margin-bottom: 20px;
+  width: 80%;
+  
+}
+
+.rankbox > p {
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+}
+
+.first {
+  font-size: 2em;
+}
+
+.second {
+  font-size: 1.5em;
+}
+
+.chp {
+  height: 100px;
+  position: relative;
+
+  text-align: left;
+}
+
+.character {
+  position: absolute;
+
+  width: 250px;
+  height: auto;
+
+  top: 0px;
+  left: 0;
+  right: 0;
+  margin: auto auto;
+
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+
+  animation: swap 1s steps(1) infinite both;
+}
+
+.character:first-child {
+  animation-delay: 0.5s;
+}
+
+
+
+@keyframes swap {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.games > div {
+  animation: change-color 4s steps(1) infinite both;
+  padding-bottom: 70px;
+}
+
+.games > div:nth-child(1) {
+  animation-delay: 0s;
+}
+.games > div:nth-child(2) {
+  animation-delay: 1s;
+}
+.games > div:nth-child(3) {
+  animation-delay: 2s;
+}
+.games > div:nth-child(4) {
+  animation-delay: 3s;
+}
+
+@keyframes change-color {
+  0% {
+    color: black;
+  }
+  75% {
+    color: white;
+  }
+}
+
+#ranking {
+  font-size: 2em;
+  
+  margin: 8px;
+  margin-top: 25px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+ 
+  
+}
+
+.taitol {
+  font-size: 4em;
+  margin: 0;
+  height: 1.2em;
+}
+.game {
+  font-size: 2em;
+  margin: 8px;
+  margin-top: 30px;
+  margin-right: 10px;
+  margin-bottom: 50px;
+  margin-left: 10px;
+}
+
+.thank {
+  font-size: 1em;
+  margin: 8px;
+  margin-top: 15px;
+  margin-right: 0px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+}
+
+/* .thank > span {animation: thank 28s steps(1) infinite both;}
+.thank > span:nth-child(1 ){ animation-delay:0s; }
+.thank > span:nth-child(2 ){ animation-delay:1s; }
+.thank > span:nth-child(3 ){ animation-delay:2s; }
+.thank > span:nth-child(4 ){ animation-delay:3s; }
+.thank > span:nth-child(5 ){ animation-delay:4s; }
+.thank > span:nth-child(6 ){ animation-delay:5s; }
+.thank > span:nth-child(7 ){ animation-delay:6s; }
+.thank > span:nth-child(8 ){ animation-delay:7s; }
+.thank > span:nth-child(9 ){ animation-delay:8s; }
+.thank > span:nth-child(10){ animation-delay:9s; }
+.thank > span:nth-child(11){ animation-delay:10s; }
+.thank > span:nth-child(12){ animation-delay:11s; }
+.thank > span:nth-child(13){ animation-delay:12s; }
+.thank > span:nth-child(14){ animation-delay:13s; }
+.thank > span:nth-child(15){ animation-delay:14s; }
+.thank > span:nth-child(16){ animation-delay:15s; }
+.thank > span:nth-child(17){ animation-delay:16s; }
+.thank > span:nth-child(18){ animation-delay:17s; }
+.thank > span:nth-child(19){ animation-delay:18s; }
+.thank > span:nth-child(20){ animation-delay:19s; }
+.thank > span:nth-child(21){ animation-delay:20s; }
+.thank > span:nth-child(22){ animation-delay:21s; }
+.thank > span:nth-child(23){ animation-delay:22s; }
+.thank > span:nth-child(24){ animation-delay:23s; }
+.thank > span:nth-child(25){ animation-delay:24s; }
+.thank > span:nth-child(26){ animation-delay:25s; }
+.thank > span:nth-child(27){ animation-delay:26s; }
+.thank > span:nth-child(28){ animation-delay:27s; }
+
+
+@keyframes thank {
+  0% {
+    color: white;
+    font-size:  1.2em;
+  }
+  3.6% {
+    color: black;
+    font-size: 1em;
+  }
+} */
+
+
+.taitol{
+  font-size: 3.8em;
+  margin: 8px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  height: 1.2em;
+}
+
+
+
+
